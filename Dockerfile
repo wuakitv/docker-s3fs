@@ -20,7 +20,7 @@ RUN apt-get update && apt-get install -y \
       && rm -rf /var/tmp/* \
 
 # Prepare s3fs
-COMMIT_HASH=1a23b880d58e8457e187d9de1185b42484105995
+COMMIT_HASH=06032aa661f8cfd06b997147efb47f6e0f0bbb48
 WORKDIR /usr/src/s3fs
 RUN git clone https://github.com/s3fs-fuse/s3fs-fuse.git && \
       cd s3fs-fuse && \
