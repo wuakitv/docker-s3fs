@@ -1,4 +1,4 @@
-FROM debian:wheezy
+FROM debian:stretch
 MAINTAINER jordi.solsona@rakuten.com
 
 # install system wide deps and target directories
