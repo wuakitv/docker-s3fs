@@ -20,7 +20,7 @@ RUN apt-get update && apt-get install -y \
       && rm -rf /var/tmp/* \
 
 # Prepare s3fs
-COMMIT_HASH=06032aa661f8cfd06b997147efb47f6e0f0bbb48
+COMMIT_HASH=99ec09f13a03003a4f4f60d21d15acd61b547b81
 WORKDIR /usr/src/s3fs
 RUN git clone https://github.com/s3fs-fuse/s3fs-fuse.git && \
       cd s3fs-fuse && \
@@ -30,4 +30,3 @@ RUN git clone https://github.com/s3fs-fuse/s3fs-fuse.git && \
       make -j"$(nproc)" && \
       make install && \
       rm -rf /usr/src/s3fs
-
