@@ -1,5 +1,12 @@
 version: '3.4'
 
+services:
+   test:
+     build: .
+     command: script/cibuild
+     volumes:
+       - .:/docker-s3fs
+
 x-alfred-steps:
   - name: Docker build and push to AWS ECR
     image: wuakitv/alfred-ecr
