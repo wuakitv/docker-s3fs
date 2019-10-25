@@ -7,9 +7,6 @@ services:
 x-alfred-steps:
   - name: Docker build and push to AWS ECR
     image: wuakitv/alfred-ecr
-    when:
-      branch:
-        - master
     settings:
       aws_access_key_id:
         from_consul: common/bot-roushi-ecr/aws_access_key_id
