@@ -11,7 +11,7 @@ x-alfred-steps:
         from_consul: common/bot-roushi-ecr/aws_access_key_id
       aws_secret_access_key:
         from_consul_secret: common/bot-roushi-ecr/aws_secret_access_key
-      repo: wuakitv/encoding-tools-roushi
+      repo: wuakitv/docker-s3fs
       ecr_uri: 585257864808.dkr.ecr.eu-west-1.amazonaws.com
       tags:
         - ${GIT_TAG}
