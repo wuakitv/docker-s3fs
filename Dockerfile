@@ -20,7 +20,8 @@ RUN apt-get update && apt-get install -y \
       && rm -rf /var/tmp/* 
 
 # Prepare s3fs
-ENV COMMIT_HASH=06032aa661f8cfd06b997147efb47f6e0f0bbb48
+#ENV COMMIT_HASH=06032aa661f8cfd06b997147efb47f6e0f0bbb48
+ENV COMMIT_HASH=v1.87
 
 WORKDIR /usr/src/s3fs
 RUN git clone https://github.com/s3fs-fuse/s3fs-fuse.git && \
@@ -28,7 +29,7 @@ RUN git clone https://github.com/s3fs-fuse/s3fs-fuse.git && \
     git config user.email "jordi.solsona@rakuten.com" && \
     git checkout ${COMMIT_HASH}
 
-COPY src/s3fs_util.cpp /usr/src/s3fs/s3fs-fuse/src/s3fs_util.cpp 
+#COPY src/s3fs_util.cpp /usr/src/s3fs/s3fs-fuse/src/s3fs_util.cpp 
 
 RUN cd /usr/src/s3fs/s3fs-fuse && \
     ./autogen.sh && \
