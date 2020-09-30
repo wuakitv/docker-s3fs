@@ -1,5 +1,5 @@
 # Docker s3fs
-Docker to create the s3fs service
+Docker to create the s3fs service, which maps s3 to a mounted directory
 
 ## How to build
 
